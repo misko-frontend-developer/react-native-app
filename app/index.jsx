@@ -3,13 +3,13 @@ import { Link } from "expo-router";
 
 import ThemedView from "../components/ThemedView";
 import ThemedText from "../components/ThemedText";
-import ThemedLogo from "../components/ThemedLogo";
+// import ThemedLogo from "../components/ThemedLogo";
 import Spacer from "../components/Spacer";
 
 const Home = () => {
   return (
     <ThemedView style={styles.container}>
-      <ThemedLogo />
+      {/* <ThemedLogo /> */}
       <Spacer />
 
       <ThemedText style={styles.title} title={true}>
@@ -26,6 +26,10 @@ const Home = () => {
 
       <Link href="/register" style={styles.link}>
         <ThemedText>Register</ThemedText>
+      </Link>
+
+      <Link href="/profile" style={styles.link}>
+        <ThemedText>Profile</ThemedText>
       </Link>
     </ThemedView>
   );
