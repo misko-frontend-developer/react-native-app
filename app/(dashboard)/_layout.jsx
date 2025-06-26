@@ -1,8 +1,10 @@
-import { Tabs } from "expo-router";
+import { Stack, Tabs } from "expo-router";
 import { useColorScheme } from "react-native";
 import { Colors } from "../../constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
+
 import UserOnly from "../../components/auth/UserOnly";
+
 export default function DashboardLayout() {
   const colorScheme = useColorScheme();
   const theme = Colors[colorScheme] ?? Colors.light;
@@ -60,6 +62,7 @@ export default function DashboardLayout() {
             ),
           }}
         />
+        <Tabs.Screen name="books/[id]" options={{ href: null }} />
       </Tabs>
     </UserOnly>
   );
