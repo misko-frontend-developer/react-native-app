@@ -6,9 +6,12 @@ function ThemedButton({ style, ...props }) {
     <Pressable
       style={({ pressed }) => [styles.btn, pressed && styles.pressed, style]}
       {...props}
-    />
+    >
+      {props.children}
+    </Pressable>
   );
 }
+
 const styles = StyleSheet.create({
   btn: {
     backgroundColor: Colors.primary,
